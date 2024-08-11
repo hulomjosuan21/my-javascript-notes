@@ -11,12 +11,12 @@ const App = () => {
         </div>
 
         <nav>
-          <a href="/" className='onShowAnimate'>Home</a>
+          <a href="#home" className='onShowAnimate'>Home</a>
           <a href="#notes" className='onShowAnimate'>Notes</a>
         </nav>
       </header>
 
-      <section className='landingpage__container'>
+      <section className='landingpage__container' id='home'>
         <div className="onShowAnimate landingpage__text">
           <h1>{landingPageData.greeting_text} <span>Note<i className="logo-text fa-brands fa-js"></i></span></h1>
           <p>{landingPageData.greeting_paragraph}</p>
