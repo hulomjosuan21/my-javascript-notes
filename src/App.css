@@ -30,9 +30,7 @@ header nav a:hover {
 
 .logo-container h1 {
   font-size: 'Rowdies';
-  background: linear-gradient(0deg, rgba(128,237,153,1) 11%, rgba(255,255,255,1) 89%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--text-light);
 }
 
 @media only screen and (max-width: 620px) {
@@ -46,12 +44,6 @@ header nav a:hover {
   background-color: var(--clr-dark-blue);
   display: grid;
   place-items: center;
-}
-
-.landingpage__text h1 span {
-  background: linear-gradient(0deg, rgba(128,237,153,1) 11%, rgba(255,255,255,1) 89%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .landingpage__text {

@@ -7,7 +7,7 @@ const App = () => {
     <main>
       <header>
         <div className='logo-container'>
-          <h1 className='onShowAnimate'>Note<i className="fa-brands fa-js"></i></h1>
+          <h1 className='onShowAnimate'>Note<i className="logo-text fa-brands fa-js"></i></h1>
         </div>
 
         <nav>
@@ -18,7 +18,7 @@ const App = () => {
 
       <section className='landingpage__container'>
         <div className="onShowAnimate landingpage__text">
-          <h1>{landingPageData.greeting_text} <span>Note<i className="fa-brands fa-js"></i></span></h1>
+          <h1>{landingPageData.greeting_text} <span>Note<i className="logo-text fa-brands fa-js"></i></span></h1>
           <p>{landingPageData.greeting_paragraph}</p>
         </div>
       </section>

@@ -12,6 +12,7 @@
   --clr-blue: #0b6477;
   --clr-dark-blue: #213a57;
   --clr-neon-green: #80ed99;
+  --clr-jslogo: #e8d44d;
   --text-light: white;
   --text-dark: black;
 }
@@ -33,4 +34,8 @@ html, body {
     opacity: 1;
     transform: scale(1);
   }
+}
+
+.logo-text {
+  color: var(--clr-jslogo);
 }
