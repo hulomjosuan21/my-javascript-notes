@@ -60,3 +60,13 @@ header nav a:hover {
 .notes__container h1 {
   text-align: center;
 }
+
+.notes_wrapper {
+  margin-top: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 38rem));
+  grid-gap: 1rem;
+  justify-content: center;
+}

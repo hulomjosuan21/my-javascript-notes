@@ -1,6 +1,6 @@
-/* eslint-disable react/no-unescaped-entities */
 import './App.css'
-import landingPageData from './data'
+import {landingPageData, notes} from './data.js'
+import CodeBoxOne from './components/CodeBoxOne.jsx'
 
 const App = () => {
   return (
@@ -24,7 +24,13 @@ const App = () => {
       </section>
 
       <section className='notes__container' id='notes'>
-        <h1 className='onShowAnimate'>Code Notes</h1>
+        <h1 className='onShowAnimate'>Total Notes ({notes.length})</h1>
+
+        <div className="notes_wrapper">
+          {notes.map(({title, code, description}, index) => (
+            <CodeBoxOne key={index+1} title={title} code={code} description={description} />
+          ))}
+        </div>
       </section>
     </main>
   )

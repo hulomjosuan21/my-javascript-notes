@@ -1,0 +1,55 @@
+.BoxOne {
+  border-radius: 10px;
+  background-color: var(--text-light);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  padding: 0.5rem;
+  border-bottom: 4px solid var(--clr-blue);
+  height: fit-content;
+}
+
+.code__wrapper {
+  position: relative;
+  margin-top: 1rem;
+  background-color: var(--bg-sub-light);
+  border-radius: 6px;
+  padding: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.code__wrapper pre {
+  font-family: 'Source Code Pro';
+}
+
+.copy-btn {
+  font-size: large;
+  background-color: transparent;
+  border: 0;
+  position: absolute;
+  border-radius: 2px;
+  right: 0.2rem;
+  top: 0.2rem;
+  padding: 0 0.2rem;
+  transition: opacity 0.4s ease;
+}
+
+.copy-btn:hover {
+  opacity: 0.5;
+}
+
+.BoxOne h4 {
+  border-bottom: 0.1em solid black;
+  color: var(--clr-dark-blue);
+  font-weight: 900;
+}
+
+.code__description {
+  margin-top: 0.5rem;
+}
+
+.code__description pre {
+  font-family: 'Raleway';
+  white-space: pre-wrap; /* Allows text to wrap */
+  word-wrap: break-word; /* Forces long words to wrap */
+  overflow-wrap: break-word; /* Ensures compatibility with other browsers */
+  font-weight: 600;
+}
