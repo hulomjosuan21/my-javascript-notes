@@ -1,8 +1,10 @@
+/* eslint-disable no-undef */
 import './App.css'
 import {landingPageData, notes} from './data.js'
 import CodeBoxOne from './components/CodeBoxOne.jsx'
 
 const App = () => {
+
   return (
     <main>
       <header>
@@ -16,7 +18,7 @@ const App = () => {
         </nav>
       </header>
 
-      <section className='landingpage__container' id='home'>
+      <section className='landingpage__container magicpattern' id='home'>
         <div className="onShowAnimate landingpage__text">
           <h1>{landingPageData.greeting_text} <span>Note<i className="logo-text fa-brands fa-js"></i></span></h1>
           <p>{landingPageData.greeting_paragraph}</p>
@@ -24,7 +26,7 @@ const App = () => {
       </section>
 
       <section className='notes__container' id='notes'>
-        <h1 className='onShowAnimate'>Total Notes ({notes.length})</h1>
+        <h1 className='onShowAnimate'>Total Notes <span>({notes.length})</span></h1>
 
         <div className="notes_wrapper">
           {notes.map(({title, code, description}, index) => (

@@ -25,6 +25,7 @@
 .copy-btn {
   font-size: large;
   background-color: transparent;
+  color: var(--clr-dark-blue);
   border: 0;
   position: absolute;
   border-radius: 2px;
