@@ -54,7 +54,7 @@ header nav a:hover {
 
 .notes__container {
   padding-top: 55px;
-  height: 200dvh;
+  margin-bottom: 2rem;
 }
 
 .notes__container h1 {
@@ -69,4 +69,13 @@ header nav a:hover {
   grid-template-columns: repeat(auto-fit, minmax(12rem, 38rem));
   grid-gap: 1rem;
   justify-content: center;
+}
+
+footer {
+  text-align: center;
+  font-size: x-small;
+  padding: 0.5rem 0;
+  background-color: var(--clr-dark-blue);
+  color: var(--text-light);
+  font-weight: 400;
 }

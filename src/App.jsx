@@ -32,6 +32,9 @@ const App = () => {
           ))}
         </div>
       </section>
+
+
+      <footer>© 2024 NoteJS by Josuan. All Rights Reserved.</footer>
     </main>
   )
 }
