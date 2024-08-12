@@ -14,8 +14,8 @@ const App = () => {
           </div>
           <nav>
             <a href="#home" className='navlink navlink'>Home</a>
+            {/* <a href="#notes" className='navlink navlink'>Notes</a> */}
             <NavLink to="/" className="navlink onShowAnimate">Notes</NavLink>
-            <NavLink to="/addnotes" className="navlink onShowAnimate">Add Notes</NavLink>
           </nav>
         </header>
         <section className='landingpage__container magicpattern' id='home'>
@@ -27,7 +27,7 @@ const App = () => {
 
         <Routes>
           <Route path='/' element={<NotesContainer/>}/>
-          <Route path='addnotes' element={<AddNotes/>}/>
+          <Route path='admin' element={<AddNotes/>}/>
         </Routes>
 
         <footer>© 2024 NoteJS by Josuan. All Rights Reserved.</footer>

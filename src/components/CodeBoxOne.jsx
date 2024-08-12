@@ -1,20 +1,20 @@
 /* eslint-disable react/prop-types */
 import './component_style.css'
 
-const CodeBoxOne = ({title,code,description}) => {
+const CodeBoxOne = ({note}) => {
   const handleCopy = () => {
-    navigator.clipboard.writeText(code);
+    navigator.clipboard.writeText(note.code);
   };
 
   return (
     <div className='animateOnScroll BoxOne'>
-      <h4>{title}</h4>
+      <h4>{note.title}</h4>
 
       <div className='code__wrapper'>
         <button className='copy-btn' onClick={handleCopy}><i className="fa-regular fa-clipboard"></i></button>
         <pre>
           <code>
-            {code}
+            {note.code}
           </code>
         </pre>
       </div>
@@ -22,7 +22,7 @@ const CodeBoxOne = ({title,code,description}) => {
       <div className="code__description">
           <pre>
           <code>
-            {description}
+            {note.description}
           </code>
         </pre>
       </div>
