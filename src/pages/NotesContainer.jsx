@@ -7,7 +7,7 @@ const NotesContainer = () => {
       <h1 className='onShowAnimate'>Total Notes <span>({notes.length})</span></h1>
 
       <div className="notes_wrapper">
-        {notes.map(({title, code, description}, index) => (
+        {notes && notes.map(({title, code, description}, index) => (
           <CodeBoxOne key={index+1} title={title} code={code} description={description} />
         ))}
       </div>

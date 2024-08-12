@@ -1,22 +1,37 @@
 import { useState } from 'react'
 import './pages_style.css'
-
+import {getDatabase, ref, set, push} from "firebase/database";
+import app from '../firebaseConfig';
 
 const AddNotes = () => {
 
   const [noteTitle, setNoteTitle] = useState('');
   const [noteSnippet, setNoteSnippet] = useState('');
   const [noteDescription, setNoteDescription] = useState('');
-  
 
   async function handleSubmit(e) {
     e.preventDefault()
 
-    console.log(`${noteTitle}\n${noteSnippet}\n${noteDescription}`)
+    if(noteTitle && noteSnippet && noteDescription){
+      const db = getDatabase(app);
+      const newDoc = push(ref(db, "note/josuan"));
+  
+      set(newDoc, {
+        title: noteTitle,
+        code: noteSnippet,
+        description: noteDescription
+      }).then(() => {
+        alert("data added successfully");
+      }).catch((err) => {
+        alert(`Error: ${err}`)
+      })
 
-    setNoteTitle('')
-    setNoteSnippet('')
-    setNoteDescription('')
+      setNoteTitle('')
+      setNoteSnippet('')
+      setNoteDescription('')
+    }else {
+      alert("data is empty")
+    }
   }
 
   return (
