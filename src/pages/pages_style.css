@@ -1,0 +1,27 @@
+.add_notes_wrapper {
+  display: grid;
+  place-content: center;
+}
+
+.add_notes_wrapper form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.add_notes_wrapper form input {
+  padding: 0.5rem;
+  font-size: larger;
+}
+
+.add_notes_wrapper form textarea {
+  padding: 0.5rem;
+  font-size: larger;
+  height: fit-content;
+}
+
+.add_notes_wrapper form button {
+  padding: 0.5rem 2rem;
+  width: fit-content;
+}
