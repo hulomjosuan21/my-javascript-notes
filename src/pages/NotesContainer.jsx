@@ -1,39 +1,31 @@
-import CodeBoxOne from '../components/CodeBoxOne.jsx'
-import {getDatabase, ref, get } from "firebase/database";
-import app from '../firebaseConfig.js';
 import { useEffect, useState } from 'react';
-
+import CodeBoxOne from '../components/CodeBoxOne.jsx'
+import { db } from '../firebaseConfig.js';
+import { collection, getDocs } from "firebase/firestore";
 const NotesContainer = () => {
   
-  const [notes, setNotes] = useState([]);
+  const [notes, setNotes] = useState([])
+
+  const getNotes = async () => {
+    const querySnapshot = await getDocs(collection(db, "notes"));
+    const _notes = querySnapshot.docs.map(doc => ({id: doc.id, ...doc.data()}))
+    setNotes(_notes)
+  }
 
   useEffect(() => {
-    const fetchNotes = async () => {
-      try {
-        const db = getDatabase(app);
-        const dbRef = ref(db, 'note/josuan');
-        const snapshot = await get(dbRef);
-
-        if (snapshot.exists()) {
-          setNotes(Object.values(snapshot.val()));
-        } 
-      } catch (error) {
-        console.error('Error fetching data: ', error);
-      }
-    };
-
-    fetchNotes();
-  }, []);
-
+    getNotes()
+  }, [])
 
   return (
     <section className='notes__container' id='notes'>
       <h1 className='onShowAnimate'>Total Notes <span>({notes.length})</span></h1>
 
       <div className="notes_wrapper">
-        {notes && notes.map((note, index) => (
-          <CodeBoxOne key={index} note={note} />
-        ))}
+        {
+          notes.map(({id, title, code, description}) => (
+            <CodeBoxOne key={id} title={title} code={code} description={description}/>
+          ))
+        }
       </div>
     </section>
   )
