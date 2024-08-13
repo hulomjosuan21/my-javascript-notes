@@ -14,11 +14,15 @@ header nav .navlink {
   text-decoration: none;
   font-weight: 600;
   color: var(--text-light);
-  padding: 0.5rem 1rem;
+  padding: 0.5rem clamp(0.5rem, 1vw, 1rem);
   border-radius: 6px;
   transition: all 0.4s ease;
   cursor: pointer;
-  margin-right: 1rem;
+  font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+}
+
+header nav .navlink:nth-of-type(1) {
+  margin-right: clamp(0.5rem, 1vw, 1rem);
 }
 
 header nav a:hover {
@@ -29,12 +33,7 @@ header nav a:hover {
 .logo-container h1 {
   color: var(--text-light);
   user-select: none;
-}
-
-@media only screen and (max-width: 620px) {
-  header {
-    padding: 0.5rem 5dvw;
-  }
+  font-size: clamp(1rem, 2.5vw, 2.5rem);
 }
 
 .landingpage__container {
@@ -50,12 +49,12 @@ header nav a:hover {
 }
 
 .landingpage__text h1 {
-  font-size: calc(1em + 1vw);
+  font-size: clamp(1rem, 3vw, 3rem);
 }
 
 .landingpage__text p {
   margin: 0 10vw;
-  font-size: calc(0.5em + 0.5vw);
+  font-size: clamp(0.6rem, 1.5vw, 1.5rem);
 }
 
 .notes__container {
@@ -65,7 +64,7 @@ header nav a:hover {
 
 .notes__container h1 {
   text-align: center;
-  font-size: calc(1em + 1vw);
+  font-size: clamp(1rem, 2vw, 2rem);
 }
 
 .notes__container h1 span {
@@ -79,6 +78,7 @@ header nav a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12rem, 38rem));
   grid-gap: 1rem;
+  text-align: center;
   justify-content: center;
 }
 
