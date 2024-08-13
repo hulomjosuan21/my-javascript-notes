@@ -12,13 +12,17 @@ const App = () => {
           </h1>
         </div>
         <nav>
-          <a href="#home" className="navlink navlink">
+          <a href="#home" className="navlink">
             Home
           </a>
-          <a href="#notes" className="navlink navlink">
+          <a href="#notes" className="navlink">
             Notes
           </a>
         </nav>
+
+        <a href="https://github.com/hulomjosuan21" className="navlink" target="_blank">
+          <i className="fa-brands fa-github"></i>
+          </a>
       </header>
       <section className="landingpage__container magicpattern" id="home">
         <div className="onShowAnimate landingpage__text">
