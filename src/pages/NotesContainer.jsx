@@ -18,7 +18,13 @@ const NotesContainer = () => {
 
   return (
     <section className='notes__container' id='notes'>
-      <h1 className='onShowAnimate'>{(notes.length > 0) ? `Total Notes ${<span>{notes.length}</span>}` : "Loading..."}</h1>
+      <h1 className="onShowAnimate">
+        {notes.length > 0 ? (
+          <>Total Notes (<span>{notes.length}</span>)</>
+        ) : (
+          "Loading..."
+        )}
+      </h1>
 
       <div className="notes_wrapper">
         {
